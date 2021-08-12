@@ -154,7 +154,8 @@ multi factor authentication
 Scale-Up: 한 시스템내에서 Core또는 Ram을 늘리는 방식
 Scale-Out: 동일한 시스템을 여러 대 구성.
 
-13. DynamoDB
+13. Amazon DynamoDB
+- Amazon DynamoDB는 어떤 규모에서도 10밀리초 미만의 성능을 제공하는 키-값 및 문서 데이터베이스
 - AWS의 Serverless 서비스
 - 어떤 규모에서도 일관되게 10밀리 초 미만의 응답 시간을 제공
 - DAX라는 인 메모리 캐시를 제공
