@@ -130,6 +130,13 @@ multi factor authentication
 2) 서버로부터 받은 데이터를 HTML로 표시할 때 사용
 3) 회사는 일반적으로 프런트앤트에 "View JS, Angular JS, React"등을 이용.
 
+7. Elastic IP
+1) 한달에 500원 정도 부과
+
+8. Bootstrap - How to apply
+1) https://getbootstrap.com/docs/5.1/getting-started/introduction/
+2) 사용방법 배우기 - https://www.w3schools.com/bootstrap/bootstrap_ver.asp
+
 
 
 

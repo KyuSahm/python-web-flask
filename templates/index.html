@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <title>My flask app</title>
+</head>
+<body>
+        <h1>
+            Hello Flask~!
+        </h1>
+        <h2>My name is {{ name }}.</h2>
+        <h2>I'm {{ age }} years old.</h2>
+        </h2>
+        <table>
+          <tr>
+            <td>Blood Type</td>
+            <td>{{ info.blood_type }}</td>
+          </tr>
+          <tr>
+            <td>Height</td>
+            <td>{{ info.height }}</td>
+          </tr>
+          <tr>
+            <td>MBTI</td>
+            <td>{{ info.mbti }}</td>
+          </tr>
+        </table>
+        <h2>My favorite foods</h2>
+        <ul>
+            {% for food in foods %}
+            <li>{{ food }}</li>
+            {% endfor %}
+        </ul>
+</body>
+</html>
