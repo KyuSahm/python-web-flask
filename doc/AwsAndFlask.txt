@@ -133,11 +133,31 @@ multi factor authentication
 7. Elastic IP
 1) 한달에 500원 정도 부과
 
-8. Bootstrap - How to apply
+8. Bootstrap - 기본적인 웹 템플릿 제공. 
 1) https://getbootstrap.com/docs/5.1/getting-started/introduction/
 2) 사용방법 배우기 - https://www.w3schools.com/bootstrap/bootstrap_ver.asp
 
+9. web crawl 실습을 위해 터미널에서 가상 환경에 설치
+>pip install Flask
+>pip install requests
+>pip install beautifulsoup4
+>pip install flask_cors
 
+10. 웹페이지 기획
+1) https://ovenapp.io/
+
+11. 데이터베이스 랭킹
+- https://db-engines.com/en/ranking
+- NoSQL DB중에는 MongoDB와 Redis가 있음.
+
+12. Scale-Up vs Scale-out
+Scale-Up: 한 시스템내에서 Core또는 Ram을 늘리는 방식
+Scale-Out: 동일한 시스템을 여러 대 구성.
+
+13. DynamoDB
+- AWS의 Serverless 서비스
+- 어떤 규모에서도 일관되게 10밀리 초 미만의 응답 시간을 제공
+- DAX라는 인 메모리 캐시를 제공
 
 
 
