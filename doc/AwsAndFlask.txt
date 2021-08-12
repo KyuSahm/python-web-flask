@@ -1,0 +1,145 @@
+1. 전반적인 웹기반 기술 관련 사이트
+- w3schools.com
+
+2. PyCharm IDE의 가상환경 설정
+1) PyCharm 설치
+2) PyCharm에서 새로운 프로젝트 생성
+3) Terminal에서 "pip install flask"명령 수행
+
+3. HTTP 주요 요소
+- URI
+- HTTP Method (POST, GET, PUT, DELETE etc)
+- Request Parameter
+- Response Body
+- Request Header
+- Response Header
+- Status Code
+
+3. REST API
+1) CRUD
+- HTTP method의 POST, GET, PUT, DELETE에 대응. 이것은 강제 사항은 아니고, 약속에 가깝다.
+- https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol
+
+2) Google REST API Guideline
+- https://cloud.google.com/apis/design
+
+3) 카카오톡 REST API 규격
+- https://developers.kakao.com/docs/latest/ko/message/rest-api
+
+4. Request Body and Response Body
+1) Request Body
+- 클라이언트가 서버로 요청 데이터 요청을 하면서 함께 보내는 데이터
+2) Response Body
+- 서버가 요청에 대한 응답으로 클라이언트에게 보내는 데이터
+- simple string, xml, json등 다양한 포맷
+
+5. HTTP Request Data
+1) Query String(GET Method)
+- https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=0&ie=utf8&query=코로나+라이브
+  https://search.naver.com/search.naver => URI
+  where=nexearch&sm=top_hty&fbm=0&ie=utf8&query=코로나+라이브 => GET Method를 이용한 Query String
+
+- https://www.google.co.kr/search?q=weather
+  https://www.google.co.kr/search => URI
+  q=weather => GET Method를 이용한 Query String
+  사용자가 인위적으로 Query String만 바꿔서 동작시켜도 동작 => https://www.google.co.kr/search?q=bitcoin
+
+예)
+@app.route('/query')
+def index():
+    args = request.args
+    id = args.get('id')
+    date = args.get('date')
+    print(id)
+    print(date)
+    return "Query String!!"
+
+2) Path Param(GET Method)
+- https://brunch.co.kr/@insateam/614
+  https://brunch.co.kr/@insateam => URI
+  614 => Path Param
+
+- https://brunch.co.kr/@insateam/613
+
+예) 브런치 같은 경우, 아래와 같은 형태로 되어 있을 듯.
+@app.route('/path/<user_id>/<post_id>')
+def path_param(user_id, post_id):
+    print(user_id)
+    print(post_id)
+    return "Path Param!!"
+
+3) Request Body(POST/PUT Method)
+- 보내고자 하는 양이 적을 때는 GET 방식, 많을 경우는 POST/PUT사용
+- POST Method: 데이터 생성용. PUT Method: 데이터 수정용
+- 실습방법
+PostMan에서 Post방식 >> Body>> raw>> JSON선택해서 데이터 입력
+{
+  "id": 1,
+  "name": "kskim"
+}
+
+Server에서는 아래와 같이 처리함.
+# Post Method
+@app.route('/body', methods=['POST'])
+def request_body():
+   print(request.json)
+   body = request.json
+   id = body['id']
+   name = body['name']
+
+   print(id)
+   print(name)
+   return "Request Body!!"
+
+4. AWS EC2에서 Flask Server 띄우기
+- sudo python3 main.py
+- main.py : "app.run(host="0.0.0.0", port=80)"에서 주소와 포트 지정가능
+from flask import Flask, request
+app = Flask(__name__)
+
+# this function is called by flask framework
+@app.route('/json/object')
+def get_json_object():
+    response = {"id": 1}
+    return response
+
+@app.route('/json/list')
+def get_json_list():
+    list = [1, 2, 3, 4, 5]
+    response = {"list": list}
+    return response
+
+@app.route('/sensor/data/list')
+def get_sensor_data_list():
+    data1 = {"device_id": "LED01", "data": "on", "datetime": "20190731 00:12:47"}
+    data2 = {"device_id": "LED02", "data": "off", "datetime": "20190731 00:58:01"}
+
+    list = [data1, data2]
+    response = {"data_list": list}
+
+    return response
+
+if __name__ == '__main__':
+    app.run(host="0.0.0.0", port=80)
+
+5. MFA
+multi factor authentication
+
+6. Flask Templates
+1) 회사에서는 거의 사용 안하는 방법
+2) 서버로부터 받은 데이터를 HTML로 표시할 때 사용
+3) 회사는 일반적으로 프런트앤트에 "View JS, Angular JS, React"등을 이용.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
