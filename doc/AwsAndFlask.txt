@@ -160,6 +160,11 @@ Scale-Out: 동일한 시스템을 여러 대 구성.
 - 어떤 규모에서도 일관되게 10밀리 초 미만의 응답 시간을 제공
 - DAX라는 인 메모리 캐시를 제공
 
+14. MySQL 라이브러리 설치 on 가상환경(python)
+>pip install flask-mysql
+
+15. MySQL Sample codes on python 
+- user_controller.py
 
 
 
