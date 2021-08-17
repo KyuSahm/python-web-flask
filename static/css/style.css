@@ -1,0 +1,86 @@
+body {
+  background: #43C6AC;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #F8FFAE, #43C6AC);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #F8FFAE, #43C6AC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  text-align: center;
+}
+.done {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+input {
+  width: 100%;
+  display: none;
+  outline: none;
+  height: 40px;
+  font-size: 14px;
+  padding-left: 20px;
+  box-sizing: border-box;
+}
+
+.container{
+  width: 300px;
+  height: auto;
+  background-color: white;
+  border: 1px solid #999;
+  margin: auto;
+  text-align: left;
+  line-height: 40px;
+}
+
+.header{
+  background-color: darkblue;
+  color: white;
+}
+
+.fa-plus{
+  float:right;
+  padding: 8px;
+}
+
+h3{
+  padding: 6px;
+  margin: 0;
+}
+
+li {
+  list-style-type: none;
+  background-color: white;
+  color: #555;
+}
+
+li:nth-child(2n){ /* select every 2 li and set his color to this one */
+  background-color: #eee;
+}
+
+ul {
+  padding: 0px;
+  margin: 0px;
+}
+
+.fa .fa-trash {
+  padding: 10px;
+
+}
+
+span .fa-trash{
+  background-color: red;
+  height: 40px;
+  line-height: 40px;
+  width: 0px;
+  color: white;
+  display: inline-block;
+  margin-right: 20px;
+  text-align: center;
+  transition: background, 0.2s linear;
+  opacity: 0;
+
+}
+
+li:hover span .fa-trash{
+  width: 50px;
+  opacity: 1;
+
+}

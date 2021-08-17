@@ -166,6 +166,20 @@ Scale-Out: 동일한 시스템을 여러 대 구성.
 15. MySQL Sample codes on python 
 - user_controller.py
 
+16. to-do list project
+1) Table 생성 on MySQL
+CREATE TABLE todo (
+	id INT NOT NULL AUTO_INCREMENT, 
+	todo VARCHAR(30) NOT NULL,
+	PRIMARY KEY(id)
+);
+
+2) PyCharm New Project 생성 후, 가상환경에 패키지 설치
+- pip install Flask
+- pip install flask-mysql
+3) 공유 된 폴더/파일을 복사
+- todolist - SHARE.zip	
+
 
 
 

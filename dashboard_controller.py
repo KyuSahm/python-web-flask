@@ -31,7 +31,7 @@ def dashboard():
 
     weather_info = get_weather_info()
 
-    return render_template('index.html',
+    return render_template('dashboard.html',
                            company1_stock=company1_stock,
                            company1_news_list=company1_news_list,
                            company2_stock=company2_stock,
